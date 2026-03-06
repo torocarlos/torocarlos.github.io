@@ -1,10 +1,10 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 body {
 	margin: 0;
 	background-color: #040312;
 }
 h1 {
-	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	text-align: center;
 	padding: 20px 0;
 	text-transform: uppercase;
@@ -13,7 +13,7 @@ h1 {
 }
 a {outline: 0 !important;}
 h2 {
-	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	text-align: center;
 	padding: 20px 0;
 	text-transform: uppercase;
@@ -30,8 +30,8 @@ h2 small strong {
 	font-weight: 450;
 }
 .container1 hr {
-	border-top: 1px solid #dadada;
-	width: 50%;
+	border-top: 2px solid #0e75a7;
+	width: 91%;
 }
 /*Background effect*/
 #bg2, #bg1, #bg3 {
@@ -43,11 +43,11 @@ h2 small strong {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center 0;
-	background-size: auto;
+	background-size: cover;
 	min-height: 100vh;
 }
 #bg1 {
-	background-image: url(../images/background.png);
+	background-image: url(../images/bg.jpg);
 }
 #bg2 {
 	background-image: url(../images/bg2.jpg);
@@ -65,14 +65,26 @@ h2 small strong {
 	transition: opacity 1s ease;
 }
 /*End: Background effect*/
+
+
+#section1 {
+	padding: 0 14px;
+}
+
 .principal {
 	margin: 0 auto;
 	float: none;
 }
+
+.principal ul {
+	margin: 0;
+	padding: 0 12px;
+}
+
 .principal .container1 {
 	margin: 0 0 70px 0;
 	background: rgba(255, 255, 255, 0.95);
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 5px 16px 30px 16px;
 }
 .principal .container1 p {
@@ -100,6 +112,12 @@ h2 small strong {
 	display: inline-block;
 	margin: 0 4px 8px 0;
 }
+
+.portfolio li a {
+	display: inline-block;
+	cursor: pointer;
+}
+
 .portfolio li a img {
 	border-radius: 4px;
 	width: 100%;
@@ -109,7 +127,7 @@ h2 small strong {
 	border-radius: 4px;
 	padding: 5px 10px;
 	margin: 6px 3px;
-	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	background-color: #7bc6c4;
 	display: inline-block;
@@ -123,25 +141,34 @@ h2 small strong {
 	text-align: center;
 	padding: 0;
 }
-.education li, .contact li {
-	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
-	font-size: 20px;
+.education li, .contact li, .references li {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	list-style: none;
+	font-weight: 400;
 }
-.contact li {
+.contact li, .references li {
 	list-style: none;
 	display: inline-block;
 	margin: 10px;
 }
-.education li {
-	margin-bottom: 10px;
-	list-style: none;
+
+.references li {
+	border-radius: 7px;
+	border: 2px solid #fad2af;
+	padding: 15px 20px;
 }
+
+.references cite {
+	font-weight: 700;
+	margin-top: 7px;
+  display: inline-block;
+}
+
 .contact li a {
 	text-decoration: none;
 }
-#section4 {
-	padding: 0 20px;
-}
+
 .modal-dialog {
 	width: 100%;
 	height: 99%;
@@ -149,6 +176,11 @@ h2 small strong {
 	margin-top: 4px;
 	margin-bottom: 0;
 }
+
+.experiences img {
+	max-width: 150px;
+}
+
 @media (min-width: 768px) {
   .modal-dialog {
 		left: 10px;
@@ -180,7 +212,7 @@ h2 small strong {
 	display: inline;
 }
 .modal-title, .modal-body a {
-	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .modal-body a {
 	font-size: 18px;
