@@ -181,19 +181,10 @@ h2 small strong {
 	max-width: 150px;
 }
 
-@media (min-width: 768px) {
-  .modal-dialog {
-		left: 10px;
-  }
-}
 
 
-@media screen and (min-width:0\0) { 
-    /* Tus estilos CSS para IE9, IE10, IE11  */
-	.modal-dialog {
-		left: 0;
-  }
-}
+
+
 .modal-content {
 	height: 98%;
 	overflow: hidden;
@@ -204,11 +195,8 @@ h2 small strong {
 	max-height: 85%;
 	text-align: center;
 }
-@media (min-width: 1280px) {
-  .modal-body {
-		max-height: 91%;
-  }
-}
+
+
 .modal-body .img-responsive {
 	display: inline;
 }
@@ -229,23 +217,24 @@ h2 small strong {
 }
 
 
-/* Loader: Esto solo funciona con JavaScript, 
-Si se borra, no se muestra el loader */
-.no-js #loader {
-	display: none;
+@media (min-width: 1280px) {
+  .modal-body {
+		max-height: 91%;
+  }
 }
-.js #loader {
-	display: block;
-	position: absolute;
-	left: 100px;
-	top: 0;
+@media screen and (min-width:0\0) { 
+    /* Tus estilos CSS para IE9, IE10, IE11  */
+	.modal-dialog {
+		left: 0;
+  }
 }
-.se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('../images/Preloader_11.gif') center no-repeat #fff;
+@media (min-width: 768px) {
+  .modal-dialog {
+		left: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .modal-header .close {
+		font-size: 80px;
+  }
 }
