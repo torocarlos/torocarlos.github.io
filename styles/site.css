@@ -91,12 +91,12 @@ h2 small strong {
 	text-align: center;
 }
 .header {
-	height: 400px;
+	height: 650px;
 }
 .header h1 {
 	position: relative;
 	z-index: 5;
-	padding-top: 115px;
+	padding-top: 425px;
 }
 #brand img {
 	width: 100%;
