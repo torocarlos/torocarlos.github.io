@@ -210,10 +210,11 @@ h2 small strong {
 .modal-title {
 	text-align: center;
 	font-weight: bold;
+	margin-top: 10px;
 }
 .modal-header .close {
 	font-size: 45px;
-	opacity: 0.4;
+	opacity: 0.7;
 }
 
 
