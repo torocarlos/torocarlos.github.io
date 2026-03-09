@@ -170,7 +170,7 @@ h2 small strong {
 }
 
 .modal-dialog {
-	width: 100%;
+	width: 96%;
 	height: 99%;
 	top: 0;
 	margin-top: 4px;
@@ -196,6 +196,7 @@ h2 small strong {
 }
 .modal-content {
 	height: 98%;
+	overflow: hidden;
 }
 .modal-body {
 	overflow-y: scroll;
