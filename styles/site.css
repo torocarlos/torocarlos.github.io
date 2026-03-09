@@ -43,7 +43,7 @@ h2 small strong {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center 0;
-	background-size: cover;
+	background-size: 100%;
 	min-height: 100vh;
 }
 #bg1 {
