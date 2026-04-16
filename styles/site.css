@@ -165,6 +165,10 @@ h2 small strong {
   display: inline-block;
 }
 
+.references a cite {
+	text-decoration: underline !important;
+}
+
 .contact li a {
 	text-decoration: none;
 }
