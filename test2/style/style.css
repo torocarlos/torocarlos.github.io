@@ -17,14 +17,20 @@ body { margin: 0; font-family: "Cormorant Garamond", serif; background: #000; co
 .thumb img { display: block; width: 100%; height: auto; object-fit: cover; }
 .hr1 {all: unset; height: 1px; display: block; width: 100%; border-top: 1px solid #2d2d2d;}
 @media (max-width: 1200px) {
-  .thumb-grid {   grid-template-columns: repeat(4, minmax(0, 1fr));
+  .thumb-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 @media (max-width: 900px) {
-  .thumb-grid {   grid-template-columns: repeat(3, minmax(0, 1fr));
+  .thumb-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .references .ref {
+     max-width: 100%;
   }
 }
 @media (max-width: 640px) {
-  .thumb-grid {   grid-template-columns: repeat(2, minmax(0, 1fr));
+  .thumb-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
