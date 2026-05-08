@@ -43,6 +43,12 @@ body { margin: 0; font-family: "Cormorant Garamond", serif; background: #000; co
   .hr1 {
     display: none;
   }
+  .hero {
+    padding: 9rem 2rem;
+  }
+  .footer {
+    padding: 4rem 2rem 3rem 2rem;
+  }
 }
 @media (max-width: 640px) {
   .thumb-grid {
