@@ -4,6 +4,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet" data-custom-content-head="true" nonce="">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlos Toro - Designer Portfolio</title>
@@ -13,7 +14,7 @@
   <main class="page">
     <section class="hero">
       <h1>
-        <span class="">Hi, I'm Carlos —</span><br> abdulsan clumsica kuibmin adbaaaddggrr clumsica kuibmin adbaaaddggrr.
+        <span class="">Hi, I'm Carlos —</span><br> a web & digital designer focused on clarity, systems, and visual consistency.
       </h1>
     </section>
     <section class="references">
@@ -45,38 +46,79 @@
       </div>
     </section>
     <section class="thumb-grid">
-      <a class="thumb" href="#"><img src="image/image1.png" alt="Thumbnail 1" /></a>
-      <a class="thumb" href="#"><img src="image/image2.jpg" alt="Thumbnail 2" /></a>
-      <a class="thumb" href="#"><img src="image/image3.jpg" alt="Thumbnail 3" /></a>
-      <a class="thumb" href="#"><img src="image/image4.jpg" alt="Thumbnail 4" /></a>
-      <a class="thumb" href="#"><img src="image/image5.png" alt="Thumbnail 5" /></a>
-      <a class="thumb" href="#"><img src="image/image6.jpg" alt="Thumbnail 6" /></a>
-      <a class="thumb" href="#"><img src="image/image7.png" alt="Thumbnail 7" /></a>
-      <a class="thumb" href="#"><img src="image/image8.jpg" alt="Thumbnail 8" /></a>
-      <a class="thumb" href="#"><img src="image/image9.png" alt="Thumbnail 9" /></a>
+      <a class="thumb" href="portfolio/sabre-gift.html">
+        <img src="image/image1.jpg" alt="Thumbnail 1" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image2.jpg" alt="Thumbnail 2" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image3.jpg" alt="Thumbnail 3" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image4.jpg" alt="Thumbnail 4" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image5.jpg" alt="Thumbnail 5" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image6.jpg" alt="Thumbnail 6" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image7.jpg" alt="Thumbnail 7" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image8.jpg" alt="Thumbnail 8" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image9.jpg" alt="Thumbnail 9" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image10.jpg" alt="Thumbnail 10" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image11.jpg" alt="Thumbnail 11" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image12.jpg" alt="Thumbnail 12" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image13.jpg" alt="Thumbnail 13" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image14.jpg" alt="Thumbnail 14" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image15.jpg" alt="Thumbnail 15" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image16.jpg" alt="Thumbnail 16" />
+      </a>
+      <a class="thumb" href="#">
+        <img src="image/image17.jpg" alt="Thumbnail 17" />
+      </a>
     </section>
     <footer>
       Contact
+      <ul class="social">
+            <li>
+               <a href="https://www.facebook.com/pimalairesortandspa/" target="_blank" title="Facebook" aria-label="Facebook">
+                  <i aria-hidden="true" class="fa-brands fa-facebook"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://www.instagram.com/PimalaiKohLanta/" target="_blank" title="Instagram" aria-label="Instagram">
+                  <i aria-hidden="true" class="fa-brands fa-instagram"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://www.youtube.com/channel/UCFKNsRsWfoJy-gd4MgqhCsA" target="_blank" title="YouTube" aria-label="YouTube">
+                  <i aria-hidden="true" class="fa-brands fa-youtube"></i>
+               </a>
+            </li>
+         </ul>
     </footer>
   </main>
-  <script>
-    function updateMasonrySpans() { const grid = document.querySelector(".thumb-grid");
-      if (!grid) return;
-
-      const rowSize = 8;
-      const gap = 16;
-      const items = grid.querySelectorAll(".thumb");
-
-      items.forEach((item) => {   const img = item.querySelector("img");
-        if (!img) return;
-        const height = img.getBoundingClientRect().height;
-        const span = Math.ceil((height + gap) / (rowSize + gap));
-        item.style.gridRowEnd = "span " + span;
-      });
-    }
-
-    window.addEventListener("load", updateMasonrySpans);
-    window.addEventListener("resize", updateMasonrySpans);
-  </script>
+  <script src="script/script1.js"></script>
 </body>
 </html>
