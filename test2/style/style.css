@@ -13,10 +13,12 @@ body { margin: 0; font-family: "Cormorant Garamond", serif; background: #000; co
 .references .ref .button1:focus { outline: 2px solid #fff; outline-offset: 3px; }
 .references .ref .button1:hover {background: yellow; color: #000 !important;}
 .thumb-grid { padding: 0 15px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; align-items: start; grid-auto-rows: 8px; margin-top: 20px; }
-.thumb { display: block; width: 100%; border-radius: 16px; overflow: hidden; background: #f0f0f0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.thumb { cursor: pointer; display: block; width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .thumb:focus { outline: 3px solid #0a66ff; outline-offset: 2px; }
-.thumb img { display: block; width: 100%; height: auto; object-fit: cover; }
+.thumb img { display: block; width: 100%; height: auto; object-fit: cover; cursor: pointer;}
 .hr1 {all: unset; height: 1px; display: block; width: 100%; border-top: 1px solid #2d2d2d;}
+.proyect {text-align: center;}
+.proyect img {max-width: 1024px;}
 @media (max-width: 1200px) {
   .thumb-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
