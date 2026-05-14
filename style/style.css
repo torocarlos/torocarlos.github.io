@@ -1,0 +1,63 @@
+* { box-sizing: border-box; }
+html {font-size: 16px;}
+body { margin: 0; font-family: "Cormorant Garamond", serif; background: #000; color: #c3c3c3; }
+header {border-bottom: 1px solid #2d2d2d;text-align: center;}
+header div {max-width: 1024px;margin: 0 auto;padding: 2rem 1rem;}
+header a {color: #fff !important; font-size: 1.2rem;border-radius: .2rem;}
+.page { max-width: 1400px; margin: 0 auto; padding: 0 0 1.5rem 0; }
+.page a:focus {outline: 3px solid #ffcb31; outline-offset: 4px; }
+.hero {background: url(../image/carlostoro1.jpg) center center; padding: 22rem 4rem 9rem 4rem; background-attachment: fixed;}
+.hero h1 {vertical-align: middle;font-size: 3.5rem; font-weight: 300; margin: 0;}
+.references { text-align: center; border-top: 1px solid #2d2d2d; border-bottom: 1px solid #2d2d2d; }
+.references .ref { max-width: 49%; font-size: 1.25rem; font-weight: 300; padding: 4rem 4rem 3rem 4rem; display: inline-block; vertical-align: top; text-align: left; }
+.references .border-right { border-right: 1px solid #2d2d2d;}
+.references .ref p { line-height: 1.5; }
+.references .ref img { width: 3.125rem; height: 3.125rem; border-radius: 100%; display: inline-block; vertical-align: middle; margin-right: 1rem; }
+.references .ref cite { display: inline-block; vertical-align: middle; }
+.references .ref .button1 { transition: all 0.3s ease; padding: 1rem 1.7rem; border: 2px solid #4a4a4a; border-radius: 5rem; font-style: italic; cursor: pointer; color: #d5d5d5 !important; text-decoration: none !important; display: inline-block; margin-top: 1.25rem; font-weight: 700;}
+.references .ref .button1:hover {background: #ffcb31; color: #000 !important; border-color: #ffcb31 !important;}
+.thumb-grid { padding: 0 1rem; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; align-items: start; grid-auto-rows: 8px; margin-top: 20px; }
+ .thumb::before {transition: all .5s ease;display: block; background: black; width: 100%; height:100%; content: ""; position: absolute; opacity: 0;}
+.thumb:hover::before { opacity: 80%;}
+.thumb { position: relative; cursor: pointer; display: block; width: 100%; border-radius: 1rem; overflow: hidden; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; outline: 5px solid #000; outline-offset: -4px;}
+.thumb img { display: block; width: 100%; height: auto; object-fit: cover; cursor: pointer;}
+.thumb-desc {transition: all .5s ease;position: absolute; opacity: 0; color: white !important; margin: 1rem 0 0 1rem; line-height: 2; font-size: 13px; font-family: "Roboto", sans-serif;}
+.thumb:hover .thumb-desc {position: absolute; opacity: 1;}
+.hr1 {all: unset; height: 1px; display: block; width: 100%; border-top: 1px solid #2d2d2d;}
+.proyect {text-align: center;padding: 1rem 1rem 0 1rem;max-width: 1024px; margin: 0 auto;}
+.proyect img {margin: 1rem .3rem;max-width: 100%;border-radius: 0.5rem;}
+.proyect h1 {text-align: center;font-size: 1.8rem;}
+.social {margin: 0; padding: 0; float: right;}
+.social li {list-style: none; display: inline-block; margin: 0 0 0 1.5rem;}
+.social li a {border-radius: .2rem;color: #c3c3c3 !important; font-size: 2rem; display: inline-block; padding: .3rem .5rem .15rem .5rem;}
+.footer {border-top: 1px solid #2d2d2d;margin-top: 0.625rem; text-align: left; padding: 4rem 1rem 3rem 1rem;;}
+.footer span {display: inline-block; margin-top: 0.313rem;}
+@media (max-width: 1200px) {
+  .thumb-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  html {font-size: 23px;}
+  .thumb-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .references {
+    border-bottom: none;
+  }
+  .references .ref {
+     max-width: 100%; padding: 2rem 2rem 2.5rem 2rem;
+     border-bottom: 1px solid #2d2d2d;
+  }
+  .hr1 {
+    display: none;
+  }
+  .hero {
+    padding: 9rem 2rem;
+  }
+}
+@media (max-width: 640px) {
+  .thumb-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
