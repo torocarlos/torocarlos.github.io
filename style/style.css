@@ -6,7 +6,7 @@ header div {max-width: 1024px;margin: 0 auto;padding: 1.2rem 1rem;}
 header a {color: #fff !important; font-size: 1.2rem;border-radius: .2rem;padding: 0.7rem 1.5rem;display: inline-block;}
 .page { max-width: 1400px; margin: 0 auto; padding: 0 0 1.5rem 0; }
 .page a:focus {outline: 2px solid #ffcb31; outline-offset: 4px; }
-.hero {background: url(../image/carlostoro1.jpg) center center; padding: 22rem 4rem 9rem 4rem; background-attachment: fixed;}
+.hero {background: url(../image/carlostoro1.jpg); padding: 22rem 4rem 9rem 4rem; background-attachment: fixed;}
 .hero h1 {vertical-align: middle;font-size: 3.5rem; font-weight: 300; margin: 0;}
 .references { text-align: center; border-top: 1px solid #2d2d2d; border-bottom: 1px solid #2d2d2d; }
 .references .ref { max-width: 49%; font-size: 1.25rem; font-weight: 300; padding: 4rem 4rem 3rem 4rem; display: inline-block; vertical-align: top; text-align: left; }
