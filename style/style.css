@@ -35,6 +35,8 @@ header a {color: #fff !important; font-size: 1.2rem;border-radius: .2rem;padding
 
 @media (max-width: 1200px) {
   .thumb-grid {grid-template-columns: repeat(4, minmax(0, 1fr));}
+}
+@media (max-width: 1024px) {
   .hero {padding: 6rem 4rem 6rem 4rem;}
 }
 @media (max-width: 900px) {
