@@ -17,16 +17,33 @@ window.addEventListener("resize", updateMasonrySpans);
 
 
 // Scroll Position
-window.addEventListener("beforeunload", () => {
-    sessionStorage.setItem("scrollPosition", window.scrollY);
-});
-window.addEventListener("load", () => {
-    const scrollPosition = sessionStorage.getItem("scrollPosition");
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+function saveScrollPosition() {
+  sessionStorage.setItem("scrollPosition", window.scrollY);
+}
+window.addEventListener("beforeunload", saveScrollPosition);
+window.addEventListener("pagehide", saveScrollPosition);
 
-    if (scrollPosition !== null) {
-        window.scrollTo(0, parseInt(scrollPosition));
-    }
-});
+function restoreScrollPosition() {
+  const scrollPosition = sessionStorage.getItem("scrollPosition");
+
+  if (scrollPosition !== null) {
+    const y = parseInt(scrollPosition, 10);
+
+    setTimeout(() => {
+      updateMasonrySpans();
+      window.scrollTo(0, y);
+    }, 300);
+
+    setTimeout(() => {
+      updateMasonrySpans();
+      window.scrollTo(0, y);
+    }, 800);
+  }
+}
+window.addEventListener("pageshow", restoreScrollPosition);
 
 
 // guardar ultimo elemento enfocado
