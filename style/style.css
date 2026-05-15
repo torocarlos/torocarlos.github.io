@@ -32,32 +32,28 @@ header a {color: #fff !important; font-size: 1.2rem;border-radius: .2rem;padding
 .social li a {border-radius: .2rem;color: #c3c3c3 !important; font-size: 2rem; display: inline-block; padding: .3rem .5rem .15rem .5rem;}
 .footer {border-top: 1px solid #2d2d2d;margin-top: 0.625rem; text-align: left; padding: 4rem 1rem 3rem 1rem;;}
 .footer span {display: inline-block; margin-top: 0.313rem;}
+
 @media (max-width: 1200px) {
-  .thumb-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  .thumb-grid {grid-template-columns: repeat(4, minmax(0, 1fr));}
 }
 @media (max-width: 900px) {
   html {font-size: 23px;}
-  .thumb-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .references {
-    border-bottom: none;
-  }
-  .references .ref {
-     max-width: 100%; padding: 2rem 2rem 2.5rem 2rem;
-     border-bottom: 1px solid #2d2d2d;
-  }
-  .hr1 {
-    display: none;
-  }
-  .hero {
-    padding: 9rem 2rem;
-  }
+  .thumb-grid {grid-template-columns: repeat(3, minmax(0, 1fr));}
+  .references {border-bottom: none;}
+  .references .ref {max-width: 100%; padding: 2rem 2rem 2.5rem 2rem;border-bottom: 1px solid #2d2d2d;}
+  .hr1 {display: none;}
+  .hero {padding: 9rem 2rem;}
+}
+@media (max-width: 767px) {
+  html {font-size: 20px;}
+  .hero {padding: 9rem 1rem;}
+  .hero h1 {font-size: 2rem;}
+  .references .ref {padding: 2rem 1rem 2.5rem 1rem;}
+  .footer {padding: 2rem 1rem 1rem 1rem;}
+  .footer span {margin-bottom: 1.3rem;}
+  .social {float: none;}
+  .social li {margin: 0 .7rem 0 .7rem;}
 }
 @media (max-width: 640px) {
-  .thumb-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .thumb-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
 }
