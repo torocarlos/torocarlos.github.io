@@ -39,15 +39,12 @@ if (gallery) {
       controls.className = 'art-video__controls';
       controls.innerHTML = `<button type="button" aria-label="Play video">▶</button>
         <input type="range" class="art-video__seek" aria-label="Video progress" min="0" max="100" step="0.1" value="0">
-        <span class="art-video__time">0:00</span>
-        <button type="button" aria-label="Mute video">♪</button>
-        <input type="range" class="art-video__volume" aria-label="Video volume" min="0" max="1" step="0.05" value="1">`;
-      const [play, mute] = controls.querySelectorAll('button');
+        <span class="art-video__time">0:00</span>`;
+      const play = controls.querySelector('button');
       const playIcon = '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 4v16l13-8z"/></svg>';
       const pauseIcon = '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="currentColor" x="6" y="4" width="4" height="16" rx="1"/><rect fill="currentColor" x="14" y="4" width="4" height="16" rx="1"/></svg>';
       play.innerHTML = playIcon;
       const seek = controls.querySelector('.art-video__seek');
-      const volume = controls.querySelector('.art-video__volume');
       const time = controls.querySelector('.art-video__time');
       const formatTime = seconds => `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
       function togglePlay() {
@@ -70,17 +67,6 @@ if (gallery) {
       seek.addEventListener('input', () => {
         if (Number.isFinite(media.duration)) media.currentTime = Number(seek.value) / 100 * media.duration;
       });
-      function updateVolume() {
-        mute.textContent = media.muted ? '×' : '♪';
-        mute.setAttribute('aria-label', media.muted ? 'Unmute video' : 'Mute video');
-        volume.value = media.muted ? 0 : media.volume;
-      }
-      mute.addEventListener('click', () => { media.muted = !media.muted; });
-      volume.addEventListener('input', () => {
-        media.volume = Number(volume.value);
-        media.muted = media.volume === 0;
-      });
-      media.addEventListener('volumechange', updateVolume);
       media.setAttribute('disablepictureinpicture', '');
       media.setAttribute('disableremoteplayback', '');
       media.setAttribute('controlslist', 'nofullscreen nodownload noplaybackrate noremoteplayback');
@@ -172,10 +158,10 @@ if (gallery) {
 
   async function loadMedia() {
     try {
-      const response = await fetch('img/media.json', {cache: 'no-store'});
+      const response = await fetch('img-art/media.json', {cache: 'no-store'});
       if (!response.ok) throw new Error('Media list unavailable');
       const items = await response.json();
-      if (!Array.isArray(items) || !items.every(item => typeof item.src === 'string' && item.src.startsWith('img/') && ['image', 'video'].includes(item.type))) {
+      if (!Array.isArray(items) || !items.every(item => typeof item.src === 'string' && item.src.startsWith('img-art/') && ['image', 'video'].includes(item.type))) {
         throw new Error('Invalid media list');
       }
       const fragment = document.createDocumentFragment();
