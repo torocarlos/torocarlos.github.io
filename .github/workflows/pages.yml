@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir _site
           cp *.html _site/
-          cp -R art image image2 img img-art portfolio script style _site/
+          cp -R img img-art portfolio script style _site/
           if [ -f CNAME ]; then cp CNAME _site/; fi
           find _site -name .DS_Store -delete
       - uses: actions/upload-pages-artifact@v4
